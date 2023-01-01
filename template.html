@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Catinate</title>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="nav-wrapper pink lighten-4">
+      <div class="container">
+        <a href="#" class="brand-logo">🐈 catinate</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-menu"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Social</a></li>
+          <li><a href="#">Profile</a></li>
+          <li>
+            <a
+              href=""
+              class="btn-floating z-depth-0 dropdown-trigger pink"
+              data-target="user-dropdown"
+              ><i class="material-icons">person</i></a
+            >
+            <span class="badge pink darken-2 white-text z-depth-1 notification-badge">4</span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Social</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Notifications <span class="badge pink darken-1 white-text notification-badge">4</span></a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+    <ul class="dropdown-content" id="user-dropdown">
+      <li><a class="pink-text text-darken-4" href="#">Notifications <span class="badge pink darken-1 white-text notification-badge">4</span></a></li>
+      <li><a class="pink-text text-darken-4" href="#">Settings</a></li>
+      <li><a class="pink-text text-darken-4" href="#">Profile</a></li>
+    </ul>
+
+    <main class="container">
+      <!-- status update -->
+      <div class="row section">
+        <!-- <div class=""> -->
+          <form class="card col s12">
+            <div class="card-content">
+              <div class="input-field">
+                <textarea
+                  class="materialize-textarea"
+                  id="status-update"
+                ></textarea>
+                <label for="status-update">What's new?</label>
+              </div>
+              <button id="post-btn" class="btn pink waves-effect waves-light">Post</button>
+            </div>
+          </form>
+        <!-- </div> -->
+      </div>
+      <div class="row section">
+
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', (e) => {
+        M.Sidenav.init(document.querySelectorAll('.sidenav'));
+        M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), {
+          coverTrigger: false,
+          constrainWidth: false,
+        });
+      });
+    </script>
+  </body>
+</html>

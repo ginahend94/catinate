@@ -1,0 +1,7 @@
+textarea.materialize-textarea:focus {
+  border-bottom:solid 1px #e91e63 !important;
+  box-shadow: 0 1px 0 0 #e91e63 !important;
+}
+textarea.materialize-textarea:focus + label {
+  color: #e91e63 !important;
+}
